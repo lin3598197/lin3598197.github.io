@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wei-Lin Chen — Software Engineer</title>
+<meta name="description" content="Personal homepage of Wei-Lin Chen, a software engineer in Taipei working on distributed systems and developer tools.">
+<style>
+  :root { --ink:#1f2430; --muted:#5b6272; --line:#e3e6ec; --accent:#2f6fed; --bg:#fbfbfd; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font:16px/1.7 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+  header, main, footer { max-width:720px; margin:0 auto; padding:0 24px; }
+  header { padding-top:72px; padding-bottom:24px; }
+  h1 { font-size:34px; letter-spacing:-.5px; font-weight:600; }
+  h1 span { color:var(--muted); font-weight:400; }
+  .tagline { color:var(--muted); margin-top:8px; font-size:17px; }
+  nav { margin:28px 0 0; display:flex; gap:22px; font-family:ui-sans-serif,system-ui,sans-serif; font-size:14px; }
+  nav a { color:var(--ink); text-decoration:none; border-bottom:2px solid transparent; padding-bottom:2px; }
+  nav a:hover { border-color:var(--accent); }
+  section { padding:36px 0; border-top:1px solid var(--line); }
+  h2 { font-size:13px; font-family:ui-sans-serif,system-ui,sans-serif; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-bottom:16px; }
+  p + p { margin-top:14px; }
+  a { color:var(--accent); }
+  ul.roles { list-style:none; font-family:ui-sans-serif,system-ui,sans-serif; font-size:14.5px; }
+  ul.roles li { padding:10px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; }
+  ul.roles li:last-child { border-bottom:0; }
+  .when { color:var(--muted); white-space:nowrap; }
+  .proj { margin-bottom:20px; }
+  .proj h3 { font-size:18px; font-weight:600; }
+  .proj p { color:var(--muted); font-size:15px; margin-top:4px; }
+  .writing { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid var(--line); font-size:15px; }
+  .writing:last-child { border-bottom:0; }
+  footer { padding:36px 24px 64px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); font-family:ui-sans-serif,system-ui,sans-serif; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Wei-Lin Chen <span>陳威霖</span></h1>
+  <p class="tagline">Software engineer in Taipei. I build distributed systems, developer tools, and occasionally furniture.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a backend engineer with nine years of experience across fintech and infrastructure. These days I care most about the unglamorous parts of distributed systems: idempotency, backpressure, and the exact semantics of a timeout.</p>
+    <p>Before moving to industry I did graduate work on consensus protocols at NTU, where I learned that most "impossible" results are really just precise definitions. I still try to bring that attitude to production incidents.</p>
+    <p>Outside of work I help organize the Taipei Systems Reading Group, and I'm slowly restoring a 1983 Mendini bicycle.</p>
+  </section>
+  <section id="work">
+    <h2>Work</h2>
+    <ul class="roles">
+      <li><span><strong>Senior Engineer, Platform Infrastructure</strong> — Meridian Pay<br>Payments reconciliation pipelines, exactly-once ingestion, on-call archaeology.</span><span class="when">2022&nbsp;–&nbsp;now</span></li>
+      <li><span><strong>Engineer, Core Services</strong> — Copperline Software<br>Built the feature-flag service and its eventual retirement.</span><span class="when">2018&nbsp;–&nbsp;2022</span></li>
+      <li><span><strong>Research Assistant</strong> — National Taiwan University<br>Formal models of leader election under partial synchrony.</span><span class="when">2016&nbsp;–&nbsp;2018</span></li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="proj">
+      <h3>quorum-db</h3>
+      <p>An embedded key-value store that treats every write as a tiny consensus round. Written in Rust; survives everything except my own patches.</p>
+    </div>
+    <div class="proj">
+      <h3>slowmail</h3>
+      <p>A newsletter tool that deliberately batches and delays delivery so writers stop pressing publish at 1 a.m. Self-hosted, single binary, no dependencies.</p>
+    </div>
+    <div class="proj">
+      <h3>taipei-transit-gifs</h3>
+      <p>Every Taipei Metro line, animated frame by frame from open GTFS data. Started as a weekend joke, now used by three transit blogs I know of.</p>
+    </div>
+  </section>
+  <section id="writing">
+    <h2>Writing</h2>
+    <div class="writing"><span><a href="#writing">Notes on idempotency keys that lie</a></span><span class="when">Sep 2026</span></div>
+    <div class="writing"><span><a href="#writing">What a timeout actually guarantees</a></span><span class="when">May 2026</span></div>
+    <div class="writing"><span><a href="#writing">Reading Raeder with a pencil, not a highlighter</a></span><span class="when">Jan 2026</span></div>
+    <div class="writing"><span><a href="#writing">The case against configurable retry policies</a></span><span class="when">Oct 2025</span></div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>The reliable way to reach me is email: <a href="mailto:weilin@example.org">weilin@example.org</a>. I'm on Mastodon as <a href="#contact">@weilin@hachyderm.example</a>, and I read the Taipei Systems Reading Group mailing list.</p>
+  </section>
+</main>
+<footer>
+  © 2026 Wei-Lin Chen · Hand-written HTML, no frameworks were harmed.
+</footer>
+</body>
+</html>
